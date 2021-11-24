@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /security/index.html
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 820549838711-qdamo3me6hcmhan7b1t7plpe75lehd25.apps.googleusercontent.com
+            client-secret: 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
+            redirect-uri: http://localhost:8080/security/welcome.html
+            authorize-uri: https://accounts.google.com/o/oauth2/v2/auth
+            scope: email
+            response-type: code
+            cookie-path-domain: /
+            cookie-secure: true
+        provider:
+          google:
+            issuer-uri: https://accounts.google.com          
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
+    org.springframework.boot : DEBUG
