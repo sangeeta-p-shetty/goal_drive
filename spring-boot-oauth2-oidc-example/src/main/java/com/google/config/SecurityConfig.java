@@ -36,9 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	private ClientRegistration getRegistration(String client) {
 
-		System.out.println("SANGEETA "+CLIENT_PROPERTY_KEY+client);
-		System.out.println("SANGEETA env "+env);
-		System.out.println(env.getProperty(CLIENT_PROPERTY_KEY + "."+client + ".client-id"));
+		
 	    String clientId = env.getProperty(CLIENT_PROPERTY_KEY + "."+client + ".client-id");
 
 	    if (clientId == null) {
